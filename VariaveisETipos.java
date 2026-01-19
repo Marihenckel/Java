@@ -17,7 +17,12 @@ public class VariaveisETipos {
         scanner.close(); // Fecha o scanner para evitar vazamento de recursos
 
         // Exibição dos valores das variáveis no console
-        System.out.println("Seu nome é: " + nome + ", você tem " + idade + " anos, sua altura é " + altura + " metros e seu gênero é " + genero + ".");
+        if (idade > 18) {
+            System.out.println("Você é maior de idade.");
+        } else {
+            System.out.println("Você é menor de idade.");
+        }
+        System.out.println("Seu nome é: " + nome + ", você tem " + idade + " anos, sua altura é " + altura + " metros e seu gênero é " + (genero == 'M' ? "Masculino" : "Feminino") + ".");
         
        
     }
